@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+    php:
+        build: docker/Dockerfile/python
+        tty: true
+        volumes:
+            - .:/python
+        environment:
+            COLUMNS: ${TERMINAL_COLS}
+            LINES: ${TERMINAL_LINES}
